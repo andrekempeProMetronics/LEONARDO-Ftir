@@ -1,9 +1,8 @@
-<img src="assets/ProMetronics-Logo.png" alt="ProMetronics" width="260">
+<img src="assets/ProMetronics-Logo.png" alt="ProMetronics" width="130" align="right">
 
 # Spero (QCL-IR) Publications — Analytical Overview
 
-**ProMetronics GmbH** · Project **LEONARDO-Ftir** (Leonardo DRS Spero FTIR microscope · AI enablement)
-**Author:** Dr. André Kempe (andre.kempe@prometronics.com) · **Date:** 2026-07-15 · **Version:** v20
+<sub>**ProMetronics GmbH** · Project **LEONARDO-Ftir** · Dr. André Kempe (andre.kempe@prometronics.com) · 2026-07-15 · v20</sub>
 
 Structured synthesis of the **36** Spero-filtered papers from the Daylight Solutions / Leonardo DRS research archive (see `../00_Project_Input/publications/`). **33** papers had a machine-readable full text and were analysed in depth; **3** are excluded from the statistics (#12 and #25 are image-only press/application notes without a text layer, #27 is a broken 4 KB CDN stub). Extraction was done per paper across four dimensions (sample & molecules, data & parameters, spectral processing, image processing) and verified against the source texts.
 
