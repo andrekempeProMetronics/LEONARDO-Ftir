@@ -37,30 +37,6 @@ Structured synthesis of the **36** Spero-filtered papers from the Daylight Solut
 
 ---
 
-## Visual summary
-
-**Methods — spectral vs. image analysis.** Method families across the 33 analysed papers (a paper may use several families).
-
-<img src="assets/chart_spectral_methods.png" alt="Spectral-analysis methods by family" width="620">
-
-<img src="assets/chart_image_methods.png" alt="Image-analysis methods by family" width="620">
-
-**Methods grouped by type.** Nested donuts — inner ring = method *type* (physical model · mathematical/preprocessing · classic ML · deep learning · statistics), outer ring = the individual methods within each type (shaded in the type's hue).
-
-<img src="assets/chart_spectral_by_type.png" alt="Spectral methods grouped by type" width="680">
-
-<img src="assets/chart_image_by_type.png" alt="Image methods grouped by type" width="680">
-
-**What is measured — sample types and molecular groups.**
-
-<img src="assets/chart_sample_types.png" alt="Sample types studied" width="620">
-
-<img src="assets/chart_molecule_groups.png" alt="Molecular groups targeted" width="620">
-
-*Charts are regenerated from `Spero_Publications_Data.xlsx` / the extracted corpus; molecular-group and method-family assignments are multi-label (papers can appear in several slices).*
-
----
-
 ## 1) Sample types, molecular targets & object sizes
 
 Molecules/bands and object scales aggregated per sample type (union across papers in that group).
@@ -78,6 +54,13 @@ Molecules/bands and object scales aggregated per sample type (union across paper
 | **Reviews / other** | proteins (amide I/II/III); lipids/fatty acyl chains; collagen; DNA/nucleic acids (PO2-); glucose; glycogen; cholesterol; phenylalanine; metals (Fe/Cu/Zn) | reviews: IR ~1–10 µm resolution across techniques |
 
 **Reading:** tissue work is overwhelmingly about the **protein (amide I ~1650 / amide II ~1540 cm⁻¹)**, **lipid (~1740 / 1450 cm⁻¹)**, **nucleic-acid/phosphate (PO₂⁻ ~1080/1236 cm⁻¹)**, **glycogen/carbohydrate (~1030–1150 cm⁻¹)** and **collagen** bands; polymers and microplastics are identified by polymer-specific fingerprints (C–O, C–C, C=O, C–O–C); reaction studies track individual reactant/product bands for quantification.
+
+**Sample types & molecular groups (visual).**
+
+<img src="assets/chart_sample_types.png" alt="Sample types studied" width="620">
+
+<img src="assets/chart_molecule_groups.png" alt="Molecular groups targeted" width="620">
+
 
 ---
 
@@ -179,6 +162,13 @@ Molecules/bands and object scales aggregated per sample type (union across paper
 
 **Reading:** spectral pipelines split into (a) **preprocessing** — baseline correction, normalization, derivatives (Savitzky-Golay), and Mie/RMieS-EMSC scattering correction — and (b) **discrimination** — from unsupervised **PCA / k-means** to supervised **random forest, PLS/PCA-LDA, SVM**, and increasingly **deep learning**. The dominant *physical* models are **Beer-Lambert** (for quantitative reaction/tissue work) and **resonant-Mie scattering correction** (for FFPE tissue). **MATLAB** is the workhorse, with **Epina ImageLab**, **ENVI-IDL**, **ChemVision** (instrument software) and **Python** recurring.
 
+**Method distribution (spectra).** Left/top: by family. Below: nested by *type* — inner ring = physical model / math / classic ML / deep learning / PINN, outer ring = individual methods.
+
+<img src="assets/chart_spectral_methods.png" alt="Spectral methods by family" width="620">
+
+<img src="assets/chart_spectral_by_type.png" alt="Spectral methods grouped by type" width="680">
+
+
 ---
 
 ## 4) Image processing — maths, physical models & software
@@ -245,6 +235,13 @@ Molecules/bands and object scales aggregated per sample type (union across paper
 | **Reviews / other** | 3D reconstruction/rendering, image registration, segmentation, clustering | tomographic reconstruction | — |
 
 **Reading:** the signature image operation is **discrete-frequency imaging** (building chemical maps from a few wavenumbers), followed by **segmentation / supervised pixel classification**, **mosaic stitching**, **noise-fraction (MNF) denoising**, and **registration** to H&E/histology. Physically, imaging is bounded by **diffraction-limited resolution (~5 µm)** and **QCL laser-coherence / interference (fringe)** effects that several papers explicitly model or mitigate; specialised studies add **3D orientation tensors (OPPIR)**, **tomographic reconstruction**, and **optoacoustic/photothermal** contrast. Image software centers on **MATLAB**, with **Epina ImageLab**, **ChemVision**, **ImageJ**, **CellProfiler**, and dedicated deep-learning nets (**CompSegNet/U-Net**) plus microplastics tools (**siMPle**, **APA**).
+
+**Method distribution (images).** Top: by family. Below: nested by *type* — inner ring = physical model / standard image processing / classic ML / deep learning / PINN, outer ring = individual methods.
+
+<img src="assets/chart_image_methods.png" alt="Image methods by family" width="620">
+
+<img src="assets/chart_image_by_type.png" alt="Image methods grouped by type" width="680">
+
 
 ---
 
