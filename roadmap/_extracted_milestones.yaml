@@ -1,0 +1,13 @@
+# PLACEHOLDER seed — see _extracted_phases.yaml.
+milestones:
+  - id: milestone-1-1-placeholder
+    source_id: MS1.1
+    name: Placeholder milestone
+    description: >-
+      Placeholder — replace when the plan doc is populated.
+    phase_id: phase-1-placeholder
+    owner: PROM
+    target_date: 2026-10-01
+    task_ids:
+      - task-l1-1-placeholder
+    depends_on: []

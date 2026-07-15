@@ -1,0 +1,16 @@
+# Critical-path metadata, one entry per task in the plan doc.
+# Auto-extracted from <repo_path>/<plan_doc> by extract_cp_meta.py;
+# the why_conservative and why_agile fields are filled in by hand for
+# tasks that land on the CP under either verdict mode. Re-running the
+# extractor preserves hand-written why_* values (merge by source_id).
+# The Gantt CP-popup reads this YAML to render the side-by-side detail
+# panels.
+meta:
+  generator: roadmap-tools/extract_cp_meta.py
+  schema_version: 1
+entries:
+- source_id: L1.1
+  name: Placeholder
+  scope: Replace with the first work package.
+  why_conservative: ''
+  why_agile: ''

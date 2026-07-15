@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Local-only data folders
+data/raw/
+data/processed/
+data/cache/
+data/tmp/
+
+# Local GitHub PAT for credential helper — never commit
+.github-token
+
+# Files >50 MB — GitHub rejects/warns; keep local only
+# (add large binaries/datasets here as they appear)
+
+# Excel/Word owner-lock temp files
+~$*
+
+# LibreOffice owner-lock temp files
+.~lock.*#

@@ -1,0 +1,12 @@
+# PLACEHOLDER seed — see _extracted_phases.yaml.
+tasks:
+  - id: task-l1-1-placeholder
+    source_id: L1.1
+    name: Placeholder
+    milestone_id: milestone-1-1-placeholder
+    owner: PROM
+    effort_pm: 1
+    duration_months: 1
+    estimated_start: 2026-09-01
+    estimated_end: 2026-10-01
+    depends_on: []

@@ -1,0 +1,24 @@
+# Per-project Gantt config for LEONARDO-Ftir.
+#
+# Schema documented in XANA-AI/roadmap/config.yaml. Data YAMLs
+# (_extracted_phases.yaml, _extracted_milestones.yaml, _extracted_tasks.yaml,
+# _cp_meta.yaml) are placeholders until docs/PROJECT_PLAN.md is populated per
+# PROM-Portfolio/docs/BOOTSTRAP_NEW_PROJECT_PLAN.md.
+
+id: leonardo-ftir
+name: LEONARDO-Ftir
+repo_path: ../LEONARDO-Ftir
+plan_doc: docs/PROJECT_PLAN.md
+
+partners:
+  - key: prom
+    name: PROM
+    color: "#2563eb"       # blue (consistent across all sub-projects)
+  - key: leonardo-ftir
+    name: LEONARDO-Ftir
+    color: "#e11d48"       # rose — LEONARDO-Ftir primary (adjust as needed)
+joint_color: "#7c3aed"
+
+# Set the real project start once known; default cascade window is 730 days.
+# project_start_min: "YYYY-MM-DD"
+# target_project_days: 730

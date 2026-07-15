@@ -1,0 +1,16 @@
+# PLACEHOLDER seed — single anchor phase so the project renders a placeholder lane.
+# Replace wholesale once docs/PROJECT_PLAN.md is populated per
+# PROM-Portfolio/docs/BOOTSTRAP_NEW_PROJECT_PLAN.md (Step 3).
+phases:
+  - id: phase-1-placeholder
+    source_id: "Phase 1"
+    name: Placeholder
+    start_date: 2026-09-01
+    end_date: 2026-10-01
+    description: >-
+      Placeholder phase — LEONARDO-Ftir is standing up. Real phases, milestones,
+      and work packages will replace this once the plan doc is filled in.
+    effort_pm: 1
+    milestone_ids:
+      - milestone-1-1-placeholder
+    depends_on: []
