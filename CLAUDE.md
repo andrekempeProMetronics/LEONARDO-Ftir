@@ -20,6 +20,7 @@ Register `leonardo-ftir` in `PROM-Portfolio/roadmap/_portfolio.yaml` under `proj
 
 - Language toward the user: match whatever the user is using (typically German or English).
 - Outputs / reports: Markdown, terse, no rambling postambles.
+- **Document header:** standalone documents/reports get a ProMetronics logo + author + timestamp in the header — see `PROM-Portfolio/AGENT_OPERATIONS.md` §7. Logo lives at `docs/05_Research/assets/ProMetronics-Logo.png` (copied from `PROM-admin/Logo/PNG`).
 - Portfolio conventions (scaffold, data convention, versioning, workflow discipline §13) apply — see `PROM-Portfolio/PROM-Portfolio.md`. One master thread per repo, only `main` as a branch, push sweep at session end.
 - **Missing resources:** if files, assets, folder access, tools, or credentials are missing, ask immediately before starting workarounds. Example: missing logo → ask for the file, don't rebuild it.
 - **Official ProMetronics logo:** lives under `/Users/andre1/Documents/GitHub/PROM-admin/Logo/PNG` (source of truth; request access to `PROM-admin` if needed).

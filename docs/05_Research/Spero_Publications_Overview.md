@@ -1,4 +1,9 @@
+<img src="assets/ProMetronics-Logo.png" alt="ProMetronics" width="260">
+
 # Spero (QCL-IR) Publications — Analytical Overview
+
+**ProMetronics GmbH** · Project **LEONARDO-Ftir** (Leonardo DRS Spero FTIR microscope · AI enablement)
+**Author:** Dr. André Kempe (andre.kempe@prometronics.com) · **Date:** 2026-07-15 · **Version:** v20
 
 Structured synthesis of the **36** Spero-filtered papers from the Daylight Solutions / Leonardo DRS research archive (see `../00_Project_Input/publications/`). **33** papers had a machine-readable full text and were analysed in depth; **3** are excluded from the statistics (#12 and #25 are image-only press/application notes without a text layer, #27 is a broken 4 KB CDN stub). Extraction was done per paper across four dimensions (sample & molecules, data & parameters, spectral processing, image processing) and verified against the source texts.
 
@@ -29,6 +34,24 @@ Structured synthesis of the **36** Spero-filtered papers from the Daylight Solut
 | Metasurface / device | 1 | 15 |
 | Dental / hard material | 1 | 27 |
 | Reviews / other | 2 | 2, 25 |
+
+---
+
+## Visual summary
+
+**Methods — spectral vs. image analysis.** Method families across the 33 analysed papers (a paper may use several families).
+
+<img src="assets/chart_spectral_methods.png" alt="Spectral-analysis methods by family" width="620">
+
+<img src="assets/chart_image_methods.png" alt="Image-analysis methods by family" width="620">
+
+**What is measured — sample types and molecular groups.**
+
+<img src="assets/chart_sample_types.png" alt="Sample types studied" width="620">
+
+<img src="assets/chart_molecule_groups.png" alt="Molecular groups targeted" width="620">
+
+*Charts are regenerated from `Spero_Publications_Data.xlsx` / the extracted corpus; molecular-group and method-family assignments are multi-label (papers can appear in several slices).*
 
 ---
 
