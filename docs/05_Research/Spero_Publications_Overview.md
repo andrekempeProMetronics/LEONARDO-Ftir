@@ -45,6 +45,12 @@ Structured synthesis of the **36** Spero-filtered papers from the Daylight Solut
 
 <img src="assets/chart_image_methods.png" alt="Image-analysis methods by family" width="620">
 
+**Methods grouped by type.** Nested donuts — inner ring = method *type* (physical model · mathematical/preprocessing · classic ML · deep learning · statistics), outer ring = the individual methods within each type (shaded in the type's hue).
+
+<img src="assets/chart_spectral_by_type.png" alt="Spectral methods grouped by type" width="680">
+
+<img src="assets/chart_image_by_type.png" alt="Image methods grouped by type" width="680">
+
 **What is measured — sample types and molecular groups.**
 
 <img src="assets/chart_sample_types.png" alt="Sample types studied" width="620">
