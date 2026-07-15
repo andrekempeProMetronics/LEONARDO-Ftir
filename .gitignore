@@ -33,6 +33,12 @@ data/tmp/
 # Files >50 MB — GitHub rejects/warns; keep local only
 # (add large binaries/datasets here as they appear)
 
+# Downloaded publication PDFs — reproducible via download script; keep local only.
+# README.md + download_spero_publications.sh stay tracked.
+docs/00_Project_Input/publications/*.pdf
+# Extracted text working files
+docs/00_Project_Input/publications/_extracted_text/
+
 # Excel/Word owner-lock temp files
 ~$*
 
