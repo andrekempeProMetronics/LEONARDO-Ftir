@@ -31,3 +31,7 @@ Register `leonardo-ftir` in `PROM-Portfolio/roadmap/_portfolio.yaml` under `proj
 - `docs/01_Requirements/` … `docs/06_Mockups/` — detail areas of the plan
 - `roadmap/config.yaml` — per-project Gantt config
 - `MODEL_PROMPTS.md` — portfolio-wide prompt convention (intentionally identical across all repos — do not allow drift)
+
+## Push safety — large files & bulk binaries
+
+Before committing or pushing any file larger than ~50 MB (the GitHub recommended-size limit) or bulk binaries (PDFs, images, datasets, media, large docx/xlsx), STOP and warn andre first — list the files and their sizes and offer options (`.gitignore` / keep local, Git LFS, or proceed). Never push large binaries into git history without explicit confirmation; history bloat is hard to undo once pushed. Applies to every portfolio repo.
