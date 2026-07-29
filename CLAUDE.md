@@ -35,3 +35,13 @@ Register `leonardo-ftir` in `PROM-Portfolio/roadmap/_portfolio.yaml` under `proj
 ## Push safety — large files & bulk binaries
 
 Before committing or pushing any file larger than ~50 MB (the GitHub recommended-size limit) or bulk binaries (PDFs, images, datasets, media, large docx/xlsx), STOP and warn andre first — list the files and their sizes and offer options (`.gitignore` / keep local, Git LFS, or proceed). Never push large binaries into git history without explicit confirmation; history bloat is hard to undo once pushed. Applies to every portfolio repo.
+
+## Offene Aufgaben (TODO.md) — Sessions-Gedächtnis
+
+Dieses Repo führt seine offenen Aufgaben in `TODO.md` im Repo-Root. Verbindliche Konvention (portfolio-weit, alle 8 Repos):
+
+1. **Sessionstart:** `TODO.md` lesen und als Arbeitsgrundlage der Session laden.
+2. **Laufend / Sessionende:** Erledigtes abhaken oder entfernen, Neues eintragen — spätestens vor dem Push-Sweep.
+3. `TODO.md` ist getrackt und wird mit dem Sweep gepusht. Keine vertraulichen Details in die Liste — nur Verweise auf Dateien.
+
+Die Liste ist das Sitzungs-Gedächtnis für offene Punkte; sie ersetzt weder Projektplan noch Issues/Jira.
