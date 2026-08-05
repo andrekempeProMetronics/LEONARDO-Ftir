@@ -45,5 +45,6 @@ docs/00_Project_Input/publications/_extracted_text/
 # LibreOffice owner-lock temp files
 .~lock.*#
 
-# Private Übergabe an einen anderen Nutzer, bleibt lokal (andre, 2026-08-05)
+# CONFIDENTIAL — spiegelt CONFIDENTIAL.md, beide synchron halten
+# Privat, Übergabe an einen anderen Nutzer (andre, 2026-08-05)
 data/Spero-Microplastic_Cluster_Dump/

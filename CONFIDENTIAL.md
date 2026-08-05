@@ -8,7 +8,7 @@ LEONARDO-Ftir is part of the **automated portfolio sweep** (the agent commits & 
 
 | Path / pattern | What | Reason |
 |---|---|---|
-| _(none yet)_ | — | — |
+| `data/Spero-Microplastic_Cluster_Dump/` | 12 Dateien (224 KB): geclusterte Absorptionsgraphen als PNG aus Spero-Messungen vom 31.07./01.08.2023 (Mikroplastik) | **Privat, zur Übergabe an einen anderen Nutzer** (andre, 2026-08-05). Bleibt lokal auf andres Mac. Wiederbeschaffung: erneute Auswertung der Spero-Rohdaten. |
 
 **Hard rule — secrets:** never commit passwords, API keys, tokens, `.env` contents, `.github-token`, or certificate private keys. Secrets live in the password manager (1Password), never in git. If one appears in the tree, exclude it and rotate if it may have leaked.
 
