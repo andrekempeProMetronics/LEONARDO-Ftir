@@ -32,6 +32,16 @@ Register `leonardo-ftir` in `PROM-Portfolio/roadmap/_portfolio.yaml` under `proj
 - `roadmap/config.yaml` — per-project Gantt config
 - `MODEL_PROMPTS.md` — portfolio-wide prompt convention (intentionally identical across all repos — do not allow drift)
 
+## 🔴 Sessionstart: `allow_cowork_file_delete` für dieses Repo aufrufen
+
+Vor dem ersten git-Schreibvorgang einer Cowork-Session (portfolio-weite Regel, verankert 2026-08-18):
+
+```
+allow_cowork_file_delete(file_path="<REPO-ROOT>/.git/index.lock")
+```
+
+Hintergrund: Die Cowork-Sandbox darf in gemounteten Ordnern Dateien anlegen, aber nicht löschen. Ohne diese Freigabe hinterlässt **jeder** git-Schreibvorgang Sperrdateien (`index.lock`, `HEAD.lock`, `refs/*.lock`, `tmp_obj_*`), an denen jede Folgeoperation scheitert — auch die automatischer Läufe. Der Aufruf gibt das Löschen für den **gesamten Repo-Ordner** frei (ein Aufruf je Repo und Session); danach räumt git seine Sperren selbst auf. Bei „Operation not permitted" mitten in der Session: Tool aufrufen und wiederholen — keine rm-Kommandos an andre. Altlasten einmalig räumen: `find .git -name "*.lock" -delete; find .git -name "tmp_obj_*" -delete; git gc`. Details/Fallback: `PROM-Portfolio/AGENT_OPERATIONS.md` §1 („Root fix 2026-08-18").
+
 ## Push safety — large files & bulk binaries
 
 Before committing or pushing any file larger than ~50 MB (the GitHub recommended-size limit) or bulk binaries (PDFs, images, datasets, media, large docx/xlsx), STOP and warn andre first — list the files and their sizes and offer options (`.gitignore` / keep local, Git LFS, or proceed). Never push large binaries into git history without explicit confirmation; history bloat is hard to undo once pushed. Applies to every portfolio repo.
