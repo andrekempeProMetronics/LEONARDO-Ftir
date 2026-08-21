@@ -46,6 +46,38 @@ Hintergrund: Die Cowork-Sandbox darf in gemounteten Ordnern Dateien anlegen, abe
 
 Before committing or pushing any file larger than ~50 MB (the GitHub recommended-size limit) or bulk binaries (PDFs, images, datasets, media, large docx/xlsx), STOP and warn andre first — list the files and their sizes and offer options (`.gitignore` / keep local, Git LFS, or proceed). Never push large binaries into git history without explicit confirmation; history bloat is hard to undo once pushed. Applies to every portfolio repo.
 
+## 🔴 Neue Dateien nie automatisch committen — erst fragen
+
+Verbindlich seit 21.08.2026 (Festlegung andre). **Ungetrackte Dateien werden von
+keiner Session und keinem Automatiklauf committet** — auch nicht im Push-Sweep.
+Kein `git add -A`, kein `git add .`, keine Ausnahme „ist ja offensichtlich harmlos".
+
+Der Grund ist nicht Ordnungsliebe: andre legt laufend neue Dateien ab und kann bei
+jeder einzelnen nicht gefragt werden, solange er nicht da ist. Also ist der
+Standardzustand **liegenlassen**, und die Frage kommt gebündelt, wenn er wieder da ist.
+
+Ablauf:
+
+1. **Bei Sessionstart** `git status --porcelain` lesen. Alles unter „untracked" (`??`)
+   ist unentschieden — nicht committen.
+2. **andre die Liste vorlegen**, sobald er im Gespräch ist: Pfad, Größe, Datum. Kurz,
+   als Aufzählung, ohne Vermutungen über den Inhalt.
+3. Je Datei entscheidet er: **committen**, **ignorieren** (`.gitignore`) oder
+   **vertraulich** (`.gitignore` **und** `CONFIDENTIAL.md` — nur PROM-admin führt diese Liste).
+4. Erst danach handeln. Committet werden ausschließlich **namentlich genannte Pfade**:
+   bereits getrackte Dateien oder solche, denen andre gerade zugestimmt hat.
+
+Läuft die Session unbeaufsichtigt (geplante Aufgabe, nächtlicher Lauf), entfällt Schritt 2
+ersatzlos — die Dateien bleiben liegen und werden im Bericht genannt. Nichts wird
+„vorsichtshalber" mitgenommen.
+
+**Anlass:** Am 21.08.2026 lag `FINANZEN/90525_40115_2026_Chefübersicht Flexibel A4 Quer
+Nr. 1.xlsx` ungetrackt in PROM-admin — eine vertrauliche Chefübersicht. Der bestehende
+Ausschluss `FINANZEN/ProMetronics_Chef*bersicht/` ist ein *Ordner*muster und griff bei
+der losen Datei nicht. Ein Sweep mit `git add -A` hätte sie in die History gepusht.
+
+Gilt für jedes Portfolio-Repo.
+
 ## Offene Aufgaben (TODO.md) — Sessions-Gedächtnis
 
 Dieses Repo führt seine offenen Aufgaben in `TODO.md` im Repo-Root. Verbindliche Konvention (portfolio-weit, alle 8 Repos):
