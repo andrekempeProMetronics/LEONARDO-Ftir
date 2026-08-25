@@ -42,6 +42,17 @@ allow_cowork_file_delete(file_path="<REPO-ROOT>/.git/index.lock")
 
 Hintergrund: Die Cowork-Sandbox darf in gemounteten Ordnern Dateien anlegen, aber nicht löschen. Ohne diese Freigabe hinterlässt **jeder** git-Schreibvorgang Sperrdateien (`index.lock`, `HEAD.lock`, `refs/*.lock`, `tmp_obj_*`), an denen jede Folgeoperation scheitert — auch die automatischer Läufe. Der Aufruf gibt das Löschen für den **gesamten Repo-Ordner** frei (ein Aufruf je Repo und Session); danach räumt git seine Sperren selbst auf. Bei „Operation not permitted" mitten in der Session: Tool aufrufen und wiederholen — keine rm-Kommandos an andre. Altlasten einmalig räumen: `find .git -name "*.lock" -delete; find .git -name "tmp_obj_*" -delete; git gc`. Details/Fallback: `PROM-Portfolio/AGENT_OPERATIONS.md` §1 („Root fix 2026-08-18").
 
+**🔴 Pflicht bei jeder Anfrage: sagen, was gelöscht wird (Festlegung andre, 25.08.2026).**
+Der Freigabedialog zeigt andre nur einen Pfad, nicht den Umfang — die Freigabe gilt aber für den
+**gesamten Repo-Ordner**. Deshalb gilt: **Vor** jedem `allow_cowork_file_delete`-Aufruf im Chat
+auflisten, welche Dateien konkret gelöscht werden sollen (Pfad und, wo sinnvoll, Größe/Datum) und
+wozu. Eine Freigabe ohne diese Liste ist nicht zulässig — auch nicht für „offensichtliche"
+Sperrdateien. Werden später weitere Dateien zum Löschen fällig, wird erneut aufgelistet, bevor
+gelöscht wird; die einmal erteilte Ordner-Freigabe ist **keine** Blankovollmacht.
+Für unbeaufsichtigte Läufe (geplante Aufgabe, nächtlicher Lauf): nur Sperrdateien
+(`*.lock`, `tmp_obj_*`) unterhalb von `.git/` löschen, alles andere liegen lassen und im Bericht
+nennen.
+
 ## Push safety — large files & bulk binaries
 
 Before committing or pushing any file larger than ~50 MB (the GitHub recommended-size limit) or bulk binaries (PDFs, images, datasets, media, large docx/xlsx), STOP and warn andre first — list the files and their sizes and offer options (`.gitignore` / keep local, Git LFS, or proceed). Never push large binaries into git history without explicit confirmation; history bloat is hard to undo once pushed. Applies to every portfolio repo.
